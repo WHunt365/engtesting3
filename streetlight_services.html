@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Streetlight Services</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Allows content to extend beyond the screen */
+            margin: 0;
+            background-image: url(../images/repair\ \(11\ x\ 8.5\ in\)\ \(1\).png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background: #FFFFFF;
+            background: radial-gradient(circle at top left, rgba(255, 204, 102, 0.5), transparent 50%),
+                        radial-gradient(circle at top right, rgba(255, 204, 102, 0.5), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(255, 153, 51, 0.4), transparent 50%),
+                        radial-gradient(circle at bottom right, rgba(255, 153, 51, 0.4), transparent 50%);
+            overflow-y: auto; /* Enables scrolling if content overflows */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .header {
+            background: #f4a52c;
+            color: black;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+        .steps {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .step img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .step p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .footer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #f4a52c;
+        }
+
+        .steps b {
+            color: #f4a52c;
+        }
+
+        .footer {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Streetlight, Parklight, and Traffic Light Services</div>
+        <div class="steps">
+            <div class="step">
+                <img src="https://img.icons8.com/ios-filled/50/000000/send-letter.png" alt="Send">
+                <p><b>Step 1.</b> Send in a request or submit a letter at the receiving desk. Indicate fixture number or location.</p>
+            </div>
+            <div class="step">
+                <img src="https://img.icons8.com/ios-filled/50/000000/submit-resume.png" alt="Submit">
+                <p><b>Step 2.</b> Office personnel will record, submit, and forward the request.</p>
+            </div>
+            <div class="step">
+                <img src="https://img.icons8.com/ios-filled/50/000000/calendar.png" alt="Schedule">
+                <p><b>Step 3.</b> The Electrical Division shall schedule, prepare, and issue a job order relative to the request.</p>
+            </div>
+            <div class="step">
+                <img src="https://img.icons8.com/ios-filled/50/000000/electrical.png" alt="Materials">
+                <p><b>Step 4.</b> The Electrical Division requests and retrieves materials.</p>
+            </div>
+            <div class="step">
+                <img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Repair">
+                <p><b>Step 5.</b> Repair, replacement, and troubleshooting shall commence.</p>
+            </div>
+        </div>
+        <div class="footer">End of Process</div>
+    </div>
+</body>
+</html>

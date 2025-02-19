@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    background: #ff9800;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.includes {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.steps {
+    text-align: left;
+}
+
+.step {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔸 Alternating White and Orange Pattern */
+.step:nth-child(odd) {
+    background: #ff9800;
+    color: white;
+}
+
+.step:nth-child(even) {
+    background: white;
+    color: #ff9800;
+    border: 2px solid #ff9800;
+}
+
+/* Number Circle */
+.number {
+    background: white;
+    color: #ff9800;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+}
+
+/* Text inside the step */
+.step p {
+    flex: 1;
+    margin: 0;
+    padding: 0 15px;
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+}
+
+/* 🔸 Icon Colors for Alternating Steps */
+.step:nth-child(odd) .icon {
+    color: white;
+}
+
+.step:nth-child(even) .icon {
+    color: #ff9800;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Engineering Office</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+    background: #FFFFFF;
+    background: radial-gradient(circle at top left, rgba(255, 204, 102, 0.5), transparent 50%),
+                radial-gradient(circle at top right, rgba(255, 204, 102, 0.5), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(255, 153, 51, 0.4), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(255, 153, 51, 0.4), transparent 50%);
+}
+  </style>
+  <header>
+    
+</header>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <h1>Services and Requirements<h1>
+        <form class="d-flex position-relative">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+  </div>
+</nav>
+<!--Search Bar-->
+    <script>
+      window.addEventListener("scroll", function() {
+          var navbar = document.querySelector(".navbar");
+          var headerHeight = document.querySelector("header").offsetHeight;
+  
+          if (window.scrollY >= headerHeight) {
+              navbar.classList.add("sticky");
+          } else {
+              navbar.classList.remove("sticky");
+          }
+      });
+  </script>
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const dropdown = document.createElement("ul");
+  dropdown.classList.add("dropdown");
+  document.body.appendChild(dropdown);
+
+  const items = [
+      { name: "Clearance For Public Lot Application", link: "lot.html", keywords: ["lot application", "lot.html"] },
+      { name: "Receipt and Routing of Communication/Document", link: "rec.html", keywords: ["receipt", "routing documents", "rec.html"] },
+      { name: "Preparation of Detailed Engineering Documents (DED)", link: "ded.html", keywords: ["engineering documents", "ded.html"] },
+      { name: "Repair and Maintenance", link: "index_repair_and_maintenance.html", keywords: ["repair", "maintenance", "index_repair_and_maintenance.html"] },
+      { name: "Excavation Permit", link: "excavation.html", keywords: ["excavation permit", "excavation.html"] },
+      { name: "Traffic Light Services", link: "index_streetlight_services.html", keywords: ["traffic light", "traffic light services", "index_streetlight_services.html"] }
+  ];
+
+  // Event listener for input changes
+  searchInput.addEventListener("input", function () {
+      const userInput = searchInput.value.toLowerCase().trim();
+      
+      // Filter the items based on the user input matching keywords or name
+      const matches = items.filter(item => 
+          item.keywords.some(keyword => keyword.toLowerCase().includes(userInput)) ||
+          item.name.toLowerCase().includes(userInput)
+      );
+
+      // Clear the dropdown before adding new matches
+      dropdown.innerHTML = "";
+
+      if (userInput.length > 0 && matches.length > 0) {
+          matches.forEach(item => {
+              const listItem = document.createElement("li");
+              listItem.textContent = item.name;
+              listItem.addEventListener("click", function () {
+                  window.location.href = item.link;
+              });
+              dropdown.appendChild(listItem);
+          });
+          dropdown.style.display = "block";  // Show the dropdown
+      } else {
+          dropdown.style.display = "none";  // Hide the dropdown if no matches
+      }
+  });
+
+  // Hide dropdown when clicking outside the input or dropdown
+  document.addEventListener("click", function (event) {
+      if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.style.display = "none";
+      }
+  });
+
+  // Redirection when Enter key is pressed
+  searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+          const userInput = searchInput.value.toLowerCase().trim();
+
+          // Find the matching item based on name, keyword, or webpage name
+          const selectedItem = items.find(item => 
+              item.name.toLowerCase() === userInput || 
+              item.keywords.some(keyword => keyword.toLowerCase() === userInput)
+          );
+
+          if (selectedItem) {
+              window.location.href = selectedItem.link; // Redirect to the matching page
+          } else {
+              alert("No matching item found.");
+          }
+      }
+  });
+</script>
+
+
+<!----bgimg-->
+
+    
+
+
+
+<!--  HOME[PAGE]-->
+<section class="adoption">
+    <div class="row">
+      <div class="adoption-col">
+        <a href="lot.html"><img src="images/clearance.png"> </a>
+      </div>  
+
+          <div class="adoption-col">
+            <a href="rec.html"><img src="images/RECEIPT & ROUTING.png"></a>
+          </div>  
+
+              <div class="adoption-col">
+                <a href="ded.html"><img src="images/ENGINEERING DOC.png"></a>
+              </div>  
+
+              <div class="adoption-col">
+                <a href="repair_and_maintenance.html"><img src="images/REPAIR & MAINTENANCE.png"></a>
+              </div>  
+
+              <div class="adoption-col">
+                <a href="streetlight_services.html"><img src="images/LIGHTS.png"></a>
+              </div>  
+
+              <div class="adoption-col">
+                <a href="excavation.html"><img src="images/EXCAVATION.png"></a>
+              </div>  
+        </div>
+      </div>
+    </div>
+</section>
+                  
+
+
+
+
+
+
+<!--footer-->
+<footer>
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div> 
+    <div class="info">
+      <div class="info-item">
+          <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+          <div>
+              <strong>Location</strong><br>
+              Jose Felipe St., Motorpool, <br>Lower Rock Quarry,<br> Baguio City
+          </div>
+      </div>
+      <div class="info-item">
+          <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+          <div>
+              <strong>Contact us at</strong><br>
+              0744452058<br>CEO Administrative Division
+          </div>
+      </div>
+      <div class="info-item">
+          <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+          <div>
+              <strong>Email us:</strong><br>
+              ceobaguio@yahoo.com
+          </div>
+      </div>
+      <div class="info-item">
+          <div class="icon"><ion-icon name="logo-facebook"></ion-icon></div>
+          <div>
+            <strong>Social Media:</strong><br>
+            Facebook <br>
+            <a href="https://www.facebook.com/ceobaguio/" target="_blank" class="social-link">
+              <i class="fa-brands fa-facebook"></i> https://www.facebook.com/ceobaguio/
+          </a>
+        </div>
+      </div>
+  </div>
+   <p> ©2025 CITY ENGINEERING OFFICE. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

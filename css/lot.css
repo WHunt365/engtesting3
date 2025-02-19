@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #e38010f5;
+    text-align: center;
+}
+
+.header {
+    background: #f4a52c;
+    color: black;
+    padding: 5px 15px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block; /* Matches width to content */
+    margin-top: 20px;
+
+}
+
+.sub-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: black;
+}
+
+.sub-header span {
+    color: #d1872f;
+}
+
+.container {
+    width: 70%; /* Matches width to content */
+    max-width: 70%; /* Ensures it doesn’t overflow */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centers the container */
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+.step-number {
+    background: black;
+    color: orange;
+    font-size: 30px; /* Reduced for better scaling */
+    font-weight: bold;
+    padding: 10px 20px;
+    min-width: 50px;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    margin-right: 15px;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step h2 {
+    color: #020202;
+    font-size: 20px;
+}
+
+.step p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .step {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .step-number {
+        font-size: 24px;
+        padding: 8px 15px;
+        margin-bottom: 10px;
+    }
+}
